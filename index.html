@@ -1,0 +1,79 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card width-left w3-animate-left" style="width:130px">
+ <h5 class="w3-bar-item w3-animate-top w3-center">MENU</h5>
+ <button class="w3-bar-item w3-button tablink w3-animate-zoom" onclick="openGambar(event,'Home')">HOME</button>
+ <button class="w3-bar-item w3-button tablink w3-animate-zoom" onclick="openGambar(event,'Profile')">PROFILE</button>
+ <button class="w3-bar-item w3-button tablink w3-animate-zoom" onclick="openGambar(event,'Kampus')">KAMPUS</button>
+ <button class="w3-bar-item w3-button tablink w3-animate-zoom" onclick="openGambar(event,'UnikomMart')">UNIKOMMART</button>
+ <button class="w3-bar-item w3-button tablink w3-animate-zoom" onclick="openGambar(event,'Foto')">FOTO</button>
+</div>
+
+<div style="margin-left:130px">
+ <div class="w3-animate-top">
+ <img src="css.JPG" alt="html dan css" style="width:100%; height:30%">
+</div> 
+
+<div id="Home" class="w3-container Gambar w3-animate-zoom" style="display:none">
+  <h2 class="w3-container w3-orange">Home</h2>
+  <center><br><br><br>
+    <h3 style="font-size:35px"><b>Belajar HTML dan CSS</b></h3>
+	<p>Mata Kuliah Pemograman WEB 1</p>
+	<p>Mata Kuliah Aplikasi IT-1</p>
+    <p> Universitas Komputer Indonesia</p>
+</div>
+</center>
+
+<div id="Profile" class="w3-container Gambar w3-animate-bottom" style="display:none">
+ <h2 class="w3-container w3-blue w3-round-xlarge">Profile</h2>
+ <center>
+ <img src="foto.JPG" alt="Mobil" style="width:12%; height:20%">
+ <p><b>NAMA</b><br><u>Muhammad Yusuf</u><br></p>
+ <P><b>NIM</b><br><u>10121230</u><br></P>
+ <P><b>KELAS</b><br><u>IF-6</u></br></p>
+</div>
+</center>
+
+<div id="Kampus" class="w3-container Gambar w3-animate-top" style="display:none">
+  <h2 class="w3-container w3-blue">Kampus Unikom</h2>
+  <center>
+  <img src="gedung.JPG" alt="KampusUnikom" style="width:50%;">
+</div>
+</center>
+
+<div id="UnikomMart" class="w3-container Gambar w3-animate-zoom" style="display:none">
+  <h2 class="w3-container w3-orange">Unikom Mart</h2>
+  <center>
+  <img src="minum.JPG" alt="UnikomMart" style="width:50%">
+</div>
+</center>
+
+<div id="Foto" class="w3-container Gambar w3-animate-bottom" style="display:none">
+  <h2 class="w3-container w3-green">GunungMarapi</h2>
+  <center>
+  <img src="marapi.JPG" alt="GunungMarapi" style="width:50%">
+</div>
+<center>
+</div>
+  
+<script>
+function openGambar(evt, namaGambar) {
+	var i, x, tablinks;
+	x = document.getElementsByClassName("Gambar");
+	for (i = 0; i < x.length; i++) {
+	 x[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablink");
+	for (i = 0; i < x.length; i++) {
+	 tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
+	}
+	document.getElementById(namaGambar).style.display = "block";
+	evt.currentTarget.className += " w3-blue";
+	}
+</script> 
+</body>
+</html> 
